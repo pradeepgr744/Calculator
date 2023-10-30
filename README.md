@@ -1,2 +1,2 @@
 # Calculator
-Reactjs, Tailwind
+Next with Reactjs, Tailwind
