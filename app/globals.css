@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: grey;
+
+
+}
+
+.rtl-grid {
+  direction: rtl;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table {
+  align-items: center;
+}
+
+button{
+  height: 60px;
+  width: 50px;
+  font-size: medium;
+  color: white;
+  border-radius: 2px;
+  padding: 20px;
+  margin:2px;
+  background-color: grey;
+}
+button:hover{
+  box-shadow: 2px 2px 5px white;
+}
+
+/* className='text-2xl border-0 border-gray px-5 py-4 bg-gray-600 text-red-400' */
