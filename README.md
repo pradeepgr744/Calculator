@@ -1,3 +1,3 @@
 # Calculator
 
-Built by using Nextjs
+Built by using Next.js
