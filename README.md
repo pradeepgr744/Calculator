@@ -1,2 +1,3 @@
 # Calculator
-Next with Reactjs, Tailwind
+
+Built by using Nextjs
