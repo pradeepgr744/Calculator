@@ -9,32 +9,35 @@ const page = () => {
   function dis(e) {
     setNumber(Number + e)
   }
+  const handleInputChange = (event) => {
+    const isValidInput =  /^[\d/*-+.]*$/.test(event.target.value);
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      setNumber(eval(Number))
+    if (isValidInput) {
+      setNumber(event.target.value);
     }
   };
+
 
   return (
     <>
       <div className='text-center m=0 '>
         <h2 className='text-xl font-bold m=0 align-center p-3 bg-black text-white'>Calculator</h2></div>
-      <div className='flex justify-center'>
-        <div className='mt-5 hover:shadow-black shadow-2xl '>
-          <input type="text" className='text-xl text-white w-full p-3 m-0 font-bold rtl-grid border-2 border-white bg-[#333]'
+      <div className='flex justify-center '>
+        <div className='mt-5 rounded-3xl  hover:shadow-black shadow-2xl'>
+          <input type="text"
+          pattern="/^[0-9-+()]*$/"
+          required="required"
+          className='rounded-t-3xl text-xl text-right cursor-auto text-white w-full p-3 m-0 font-bold  outline-none border-b-2 border-white bg-[#333]'
             placeholder='0'
             value={Number}
-            onChange={(e) =>
-              setNumber(e.target.value)
-            }
+            onChange={handleInputChange}
             onKeyDown={(e) => {
               if (e.key === "Enter")
               setNumber(eval(Number))
               }}
           ></input>
 
-          <div className=' w-fill text-center btn'>
+          <div className=' w-fill text-center btn rounded-b-3xl'>
             <div>
 
               <button type="button" value={Number}
